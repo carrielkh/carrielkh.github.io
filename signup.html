@@ -15,28 +15,28 @@
     src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDY0kkJiTPVd2U7aTOAwhc9ySH6oHxOIYM&sensor=false">
   </script>
   <script src="js/map.js"></script>
-  <script type="text/javascript">
-$(document).ready(function (e) {
-  $("#uploadForm").on('submit',(function(e) {
-    e.preventDefault();
-    $.ajax({
-          url: "upload.php",
-      type: "POST",
-      data:  new FormData(this),
-      contentType: false,
-          cache: false,
-      processData:false,
-      success: function(data)
-        {
-      $("#targetLayer").html(data);
-        },
-        error: function() 
-        {
-        }           
-     });
-  }));
-});
-</script>
+//   <script type="text/javascript">
+// $(document).ready(function (e) {
+//   $("#uploadForm").on('submit',(function(e) {
+//     e.preventDefault();
+//     $.ajax({
+//           url: "upload.php",
+//       type: "POST",
+//       data:  new FormData(this),
+//       contentType: false,
+//           cache: false,
+//       processData:false,
+//       success: function(data)
+//         {
+//       $("#targetLayer").html(data);
+//         },
+//         error: function() 
+//         {
+//         }           
+//      });
+//   }));
+// });
+// </script>
 </head>
 <body>
 
@@ -52,12 +52,12 @@ $(document).ready(function (e) {
         <form id="uploadForm" action="upload.php" method="post">
         <div id="targetLayer" class="noimage"><br><br><br>No Image</div>
   
-        <input name="userImage" type="file" class="file" value="choose">
-        <input type="submit" value="Upload" class="button b2" />
-        <input class="button b2 sup" id="text" type="textbox" value="Email" onClick="select()">
-        <input class="button b2 sup" id="text" type="password" value="Password" onClick="select()">
-        <input class="button b2 sup" id="text" type="password" value="Confirm Password" onClick="select()">
-        <input class="button b1 " type="button" value="Submit" onClick="signup()">
+<!--         <input name="userImage" type="file" class="file" value="choose">
+        <input type="submit" value="Upload" class="button b2" /> -->
+        <input name="email" class="button b2 sup" id="text" type="textbox" value="Email" onClick="select()">
+        <input name="password"class="button b2 sup" id="text" type="password" value="Password" onClick="select()">
+        <input name="passwordagain"class="button b2 sup" id="text" type="password" value="Confirm Password" onClick="select()">
+        <input name="submit"class="button b1 " type="submit" value="Submit" >
       </form>
       </div>
     </div>
