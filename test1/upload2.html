@@ -1,0 +1,40 @@
+<?php
+$servername = 'localhost';
+$username = 'users';
+$password = 'CuwKYsbmZH6d4wvz';
+$dbname = 'forms1';
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+ $email = mysqli_real_escape_string($connection,$_POST['email']);
+        $password = mysqli_real_escape_string($connection,$_POST['password']);
+        $strSQL = mysqli_query($connection,"select name from users where email='".$email."' and password='".md5($password)."'");
+        $Results = mysqli_fetch_array($strSQL);
+        if(count($Results)>=1)
+        {
+            $message = $Results['name']." Login Sucessfully!!";
+        }
+        else
+        {
+            $message = "Invalid email or password!!";
+        }        
+
+// $value1 = $_POST['email'];
+// $value2 = $_POST['password'];
+// // $value3 = $_POST['passwordagain'];
+
+// $sql = "INSERT INTO upload2 (email, password)
+// VALUES ('$value1', '$value2')";
+
+// if ($conn->query($sql) === TRUE) {
+//     echo "New record created successfully";
+// } else {
+//     echo "Error: " . $sql . "<br>" . $conn->error;
+// }
+
+$conn->close();
+?>
