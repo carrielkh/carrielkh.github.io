@@ -1,15 +1,16 @@
 <?php
-$servername = 'carrielkh.github.io/test1/signup.html';
-$username = 'users';
-$password = 'CuwKYsbmZH6d4wvz';
+$servername = 'localhost';
+$username = 'root';
+$password = 'root';
 $dbname = 'forms1';
 
 // Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
+$conn = mysql_connect($servername, $username, $password);
 // Check connection
-if ($conn->connect_error) {
+if (!$conn) {
     die("Connection failed: " . $conn->connect_error);
 } 
+mysql_select_db("forms1",$conn);
 
 
 $value1 = $_POST['email'];
