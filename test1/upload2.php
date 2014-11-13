@@ -14,7 +14,7 @@ if(!$con)
 
 mysql_select_db("forms1",$con);
 
-$result=mysql_query("SELECT email,password FROM upload1 WHERE email='$_OPTIONS[email]' && password='$_OPTIONS[password]'");
+$result=mysql_query("SELECT email,password FROM upload1 WHERE email='$_PUT[email]' && password='$_PUT[password]'");
 
 if(!mysql_fetch_array($result,MYSQL_ASSOC))
 
