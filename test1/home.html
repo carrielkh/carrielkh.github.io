@@ -23,11 +23,11 @@
       <p class="desc">Visualize Your Travel Experiences</p>
       <div class="buttons">
         <form  action="upload2.php" method="POST">
-        <input class="button b2 lin" id="text" type="textbox" value="Email" onClick="select()">
-        <input class="button b2 lin" id="text" type="password" value="Passward" onClick="select()">
-        <input class="button b1 lin" id="login" type="button" value="Log In" onClick="login()">
-<!--         <input class="button b1 lin" type="button" value="Sign Up" onClick="signup()"> -->
-                <input class="button b1 lin" type="button" value="Sign Up" >
+        <input name="email"class="button b2 lin" id="text" type="textbox" value="Email" onClick="select()">
+        <input name="password"class="button b2 lin" id="text" type="password" value="Passward" onClick="select()">
+        <input name="submit"class="button b1 lin" id="login" type="submit" value="Log In" >
+        <input class="button b1 lin" type="button" value="Sign Up" onClick="signup()">
+
       </div>
     </div>
     <div class="map" id="googleMap" ></div>
