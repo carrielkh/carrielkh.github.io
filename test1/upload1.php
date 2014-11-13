@@ -1,5 +1,5 @@
 <?php
-$servername = 'carrielkh.github.io';
+$servername = 'carrielkh.github.io/test1/signup.html';
 $username = 'users';
 $password = 'CuwKYsbmZH6d4wvz';
 $dbname = 'forms1';
