@@ -28,7 +28,7 @@
 
       <div class="up">
         <img src="logo.png" class="logo2"></img>
-        <form id="uploadForm" action="upload1.php/" method="POST">
+        <form id="uploadForm" action="upload1.php" method="POST">
         <div id="targetLayer" class="noimage"><br><br><br>No Image</div>
   
         <input name="userImage" type="file" class="file" value="choose">

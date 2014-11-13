@@ -70,14 +70,17 @@ echo "<a href='homepage.html'> Go back to login page </a>";}
 
 }
 
-/*
-39
-1) We shouldnt allow similar usernames. (Y)
-40
-2) make the go back to login page work. (Y)
-41
-3) We shouldnt allow null usernames and passwords.(Y)
-42
-*/
+
+if(is_array($_FILES)) {
+if(is_uploaded_file($_FILES['userImage']['tmp_name'])) {
+$sourcePath = $_FILES['userImage']['tmp_name'];
+$targetPath = "images/".$_FILES['userImage']['name'];
+if(move_uploaded_file($sourcePath,$targetPath)) {
+?>
+<img src="<?php echo $targetPath; ?>" width="100px" height="100px" />
+<?php
+}
+}
+}
 
 ?>
