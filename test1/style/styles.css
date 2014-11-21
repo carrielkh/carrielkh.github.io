@@ -169,6 +169,9 @@ body {
   margin-left: 0px;
   width: 15%; }
 
+.fb-share-button {
+  width: 25%; }
+
 .op3 {
   display: none;
   position: fixed;

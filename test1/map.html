@@ -16,6 +16,25 @@
   <script src="js/map1.js"></script>
 </head>
 <body>
+  <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+<script type="text/javascript">
+window.twttr=(function(d,s,id){var t,js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return}js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);return window.twttr||(t={_e:[],ready:function(f){t._e.push(f)}})}(document,"script","twitter-wjs"));
+</script>
+
+
+<!-- Please call pinit.js only once per page -->
+<script type="text/javascript" async src="//assets.pinterest.com/js/pinit.js"></script>
+<!-- Place this tag in your head or just before your close body tag. -->
+<script src="https://apis.google.com/js/platform.js" async defer></script>
 
 	  <img src="src/bc.jpg" class="background"></img>
     <div class="menu">
@@ -36,11 +55,30 @@
       <img class="fp" src="src/fp3.png"></img>
       <img class="fp" src="src/fp4.png"></img>
     </div>
+
+
     <div id="pop2"class="pop share">
-      <img class="sh" src="src/fb.png"></img>
-      <img class="sh" src="src/tw.png"></img>
-      <img class="sh" src="src/gp.png"></img>
-      <img class="sh" src="src/fe.png"></img>
+      
+<div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button"></div>
+
+<a class="twitter-share-button" href="https://twitter.com/share"
+  data-related="twitterdev"
+  data-size="medium"
+  data-count="none">
+Tweet
+</a>
+<a href="//www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fwww.flickr.com%2Fphotos%2Fkentbrew%2F6851755809%2F&media=http%3A%2F%2Ffarm8.staticflickr.com%2F7027%2F6851755809_df5b2051c9_z.jpg&description=Next%20stop%3A%20Pinterest" data-pin-do="buttonPin" data-pin-config="none" data-pin-color="red"><img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_red_20.png" /></a>
+
+
+
+
+<!-- Place this tag where you want the +1 button to render. -->
+<div class="g-plusone" data-size="tall" data-annotation="none"></div>
+
+<!--       <img class="sh" src="src/fb.png"></img> -->
+<!--       <img class="sh" src="src/tw.png"></img>
+ -->     <!--  <img class="sh" src="src/gp.png"></img>
+      <img class="sh" src="src/fe.png"></img> -->
     </div>
     <div id="pop3"class="pop new">You Can Travel To: Beijing</div>
 <script src="js/random.js"></script>

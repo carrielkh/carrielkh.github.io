@@ -36,7 +36,7 @@
          window.open("map.html", "_self");
          }
       function signup() {
-         window.open("signup.html", "_self");
+         window.open("signup.php", "_self");
          }
       function select() {
          document.getElementById("text").select();

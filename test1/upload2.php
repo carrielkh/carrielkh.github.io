@@ -1,10 +1,26 @@
 <?php
 
     session_start();
+    $user = 'root';
+$password = 'root';
+$db = 'forms1';
+$host = 'localhost';
+$port = 8889;
 
-$con=mysql_connect("localhost","root","root");
+$link = mysql_connect(
+   "$host:$port", 
+   "root", 
+   "root"
+);
+$db_selected = mysql_select_db(
+   $db, 
+   $link
+);
 
-if(!$con)
+
+
+
+if(!$link)
 
   {
 
@@ -12,7 +28,7 @@ if(!$con)
 
   }
 
-mysql_select_db("forms1",$con);
+
 
 $result=mysql_query("SELECT email,password FROM upload1 WHERE email='$_POST[email]' && password='$_POST[password]'");
 
@@ -20,7 +36,7 @@ if(!mysql_fetch_array($result,MYSQL_ASSOC))
 
   {
 
-  echo "Wrong Login. Go back and try again.";
+header('Location: home.php');
 
   
 
@@ -39,5 +55,5 @@ else
 
   }
 
- mysql_close($con);
+ mysql_close($link);
  ?>
