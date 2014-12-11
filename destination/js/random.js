@@ -15,44 +15,32 @@ var place = ["Paris","London","Barcelona","Maui","New York City",
 "U.S.VirginIslands","Vancouver","Edinburgh","Zurich","Montreal",
 "Maldives","CapeTown","Prague","Crete","WashingtonD.C.",
 "Budapest","Bahamas","Yellowstone","Jerusalem","HongKong"];
-
-
-
-
 function randomplace() {
-  if (marker != null) {
-       marker.setMap(null); }
-
+  if (marker != null) {marker.setMap(null); }
   var n = Math.floor((Math.random() * 25) );
-
   x = latitude[n];
   y = longitude[n];
-
-	var lat = parseFloat(x);
-    var lng = parseFloat(y);
-    var latlng = new google.maps.LatLng(lat, lng);
-var iconi = "src/a.png"
-  
+  var lat = parseFloat(x);
+  var lng = parseFloat(y);
+  var latlng = new google.maps.LatLng(lat, lng);
+  var iconi = "src/a.png"
   geocoder.geocode({'latLng': latlng}, function(results, status) {
     if (status == google.maps.GeocoderStatus.OK) {
       if (results[1]) {
         map.setCenter(latlng);
-
         marker = new google.maps.Marker({
             position: latlng,
             map: map,
             icon:iconi
         });
-        infowindow.setContent( place[n] );
-        infowindow.open(map, marker);
+       infowindow.setContent( place[n] );
+       infowindow.open(map, marker);
       } 
       function deletemarker(){
         marker.setMap(null);
       }
       google.maps.event.addListener(marker, 'click', deletemarker);
       marker.setMap(map);
-      
-
     } else {
       alert('Try again!!');
     }
